@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shinobi Wiki - L'Univers de Naruto</title>
+    <title>Shinobi Wiki - L'Encyclopédie</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shojumaru&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">🥷 Shinobi Wiki</div>
-        <p>L'encyclopédie ultime de l'univers de Masashi Kishimoto</p>
+        <p>L'encyclopédie ultime de l'univers de Naruto</p>
+        
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Rechercher un ninja (ex: Kakashi)...">
+        </div>
+
+        <nav class="village-filters" id="filters">
+            <button class="filter-btn active" data-village="Tous">Accueil (Tous)</button>
+            <button class="filter-btn" data-village="Konoha">Konoha</button>
+            <button class="filter-btn" data-village="Suna">Suna</button>
+            <button class="filter-btn" data-village="Kiri">Kiri</button>
+            <button class="filter-btn" data-village="Kumo">Kumo</button>
+            <button class="filter-btn" data-village="Iwa">Iwa</button>
+            <button class="filter-btn" data-village="Akatsuki">Akatsuki</button>
+        </nav>
     </header>
 
     <main>
@@ -20,8 +34,7 @@
     <div id="character-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <div id="modal-body">
-                </div>
+            <div id="modal-body"></div>
         </div>
     </div>
 
