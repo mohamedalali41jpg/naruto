@@ -34,10 +34,7 @@ header .logo {
     margin-bottom: 0.5rem;
 }
 
-/* Barre de recherche */
-.search-container {
-    margin: 1.5rem 0;
-}
+.search-container { margin: 1.5rem 0; }
 
 #search-bar {
     padding: 12px 20px;
@@ -57,7 +54,6 @@ header .logo {
     box-shadow: 0 0 10px rgba(255, 127, 0, 0.5);
 }
 
-/* Boutons de navigation */
 .village-filters {
     display: flex;
     justify-content: center;
@@ -135,7 +131,6 @@ main {
     font-size: 1.3rem;
 }
 
-/* Fenêtre Modale */
 .modal {
     display: none; 
     position: fixed;
