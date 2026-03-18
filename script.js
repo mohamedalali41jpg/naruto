@@ -1,115 +1,243 @@
-// La base de données géante des personnages
+// La Base de données des ninjas
 const characters = [
+    // --- KONOHA ---
     {
         name: "Naruto Uzumaki",
         village: "Konoha",
-        image: "https://static.wikia.nocookie.net/naruto/images/0/09/Naruto_newshot.png",
+        image: "naruto.jpg", // Le nom exact de l'image que tu vas uploader sur GitHub
         quote: "Je ne reviens jamais sur ma parole. C'est ça, mon nindo !",
-        jutsus: "Rasengan, Multi-Clonage, Mode Ermite, Mode Chakra de Kyûbi",
-        story: `
-            <p><strong>Enfance et Solitude :</strong> Dès sa naissance, Naruto est devenu le réceptacle de Kyûbi, le démon-renard à neuf queues qui a ravagé le village de Konoha. À cause de cela, il a grandi dans l'isolement total, craint et méprisé par les villageois qui voyaient en lui le monstre responsable de leurs malheurs. Pour attirer l'attention et prouver son existence, Naruto passait son temps à faire des farces, cachant sa profonde tristesse derrière un sourire de façade.</p>
-            <p><strong>La Voie du Ninja :</strong> Son destin bascule lorsqu'il est reconnu par son professeur, Iruka Umino. Dès lors, Naruto se fixe un objectif absolu : devenir Hokage, le chef du village, afin d'être enfin reconnu et respecté par tous. Il intègre l'Équipe 7 aux côtés de Sasuke Uchiwa, son rival, et de Sakura Haruno, sous la tutelle de Kakashi Hatake.</p>
-            <p><strong>Le Héros de Konoha :</strong> Au fil des années, Naruto prouve sa valeur. Il maîtrise des techniques de rang S comme le Rasengan, apprend le Senjutsu (Mode Ermite) et finit par se lier d'amitié avec le démon qui vit en lui, Kurama. De paria du village, il devient le héros qui sauve Konoha de Pain, puis le sauveur du monde ninja lors de la Quatrième Grande Guerre Shinobi. Il réalisera finalement son rêve en devenant le Septième Hokage.</p>
-        `
+        jutsus: "Rasengan, Multi-Clonage, Mode Ermite, Orbe Shuriken",
+        story: "<p>Hôte de Kyûbi, rejeté par son village dans son enfance. À force de persévérance et de travail acharné, il est parvenu à se faire accepter de tous, à sauver le monde ninja et à réaliser son rêve absolu : devenir le Septième Hokage.</p>"
     },
     {
         name: "Sasuke Uchiwa",
         village: "Konoha",
-        image: "https://static.wikia.nocookie.net/naruto/images/2/21/Sasuke_Part_1.png",
+        image: "sasuke.jpg",
         quote: "Mon rêve ne se trouve pas dans le futur, mais dans le passé.",
-        jutsus: "Chidori, Sharingan, Mangekyō Sharingan, Amaterasu, Susanoo",
-        story: `
-            <p><strong>Le Massacre du Clan :</strong> Sasuke est l'un des derniers survivants du puissant clan Uchiwa. Toute son enfance a été brisée la nuit où son frère aîné, Itachi, a massacré l'intégralité de leur famille, laissant Sasuke en vie avec pour seule directive de le haïr et de devenir plus fort. Cet événement traumatisant a défini toute la trajectoire de la vie de Sasuke.</p>
-            <p><strong>La Quête de Puissance :</strong> Intégrant l'Équipe 7, Sasuke développe une rivalité fraternelle avec Naruto. Cependant, rongé par son désir de vengeance et réalisant qu'il ne progresse pas assez vite pour vaincre Itachi, il déserte Konoha pour rejoindre Orochimaru, un Sannin légendaire prêt à lui offrir la puissance en échange de son corps.</p>
-            <p><strong>La Rédemption :</strong> Après avoir accompli sa vengeance et découvert la terrible vérité sur le sacrifice de son frère, Sasuke sombre dans les ténèbres et jure de détruire Konoha. Il faudra toute la détermination de Naruto et un ultime combat titanesque dans la Vallée de la Fin pour ramener Sasuke à la raison. Il devient alors le "Hokage de l'Ombre", protégeant le village depuis l'extérieur pour expier ses fautes.</p>
-        `
-    },
-    {
-        name: "Itachi Uchiwa",
-        village: "Konoha / Akatsuki",
-        image: "https://static.wikia.nocookie.net/naruto/images/b/bb/Itachi.png",
-        quote: "Les gens vivent en s'appuyant sur leurs convictions et leurs connaissances...",
-        jutsus: "Tsukuyomi, Amaterasu, Susanoo, Izanami",
-        story: `
-            <p><strong>Le Génie Pacifiste :</strong> Itachi était un prodige de la famille Uchiwa, ayant éveillé son Sharingan très jeune et intégré les services spéciaux (ANBU) à l'âge de 11 ans. Ayant connu les horreurs de la Troisième Grande Guerre Shinobi dès l'âge de 4 ans, Itachi était un pacifiste dans l'âme qui détestait le conflit au-delà de tout.</p>
-            <p><strong>Le Choix Impossible :</strong> Lorsque le clan Uchiwa a planifié un coup d'État pour prendre le contrôle de Konoha, Itachi s'est retrouvé face à un dilemme déchirant : soutenir sa famille et déclencher une guerre civile qui s'étendrait au monde entier, ou massacrer son propre clan sur ordre des dirigeants de Konoha pour sauver son petit frère Sasuke et maintenir la paix. Il a choisi la deuxième option, endossant le rôle du traître.</p>
-            <p><strong>Le Héros de l'Ombre :</strong> Rejoignant l'organisation criminelle Akatsuki en tant qu'espion pour le compte de Konoha, Itachi a vécu sa vie dans l'infamie, rongé par une maladie incurable. Il a tout planifié pour mourir des mains de Sasuke, afin de faire de ce dernier le héros de Konoha et de lui transmettre ses pouvoirs oculaires.</p>
-        `
+        jutsus: "Chidori, Amaterasu, Susanoo, Rinnegan",
+        story: "<p>Survivant du massacre de son clan, Sasuke a sombré dans la haine pour se venger de son frère Itachi. Après un long voyage dans les ténèbres, il est ramené à la lumière par Naruto et protège désormais Konoha depuis l'ombre.</p>"
     },
     {
         name: "Kakashi Hatake",
         village: "Konoha",
-        image: "https://static.wikia.nocookie.net/naruto/images/2/21/Kakashi_Hatake.jpg",
-        quote: "Ceux qui ne respectent pas les règles sont des déchets, mais ceux qui abandonnent leurs amis sont pires que des déchets.",
-        jutsus: "Chidori / Raikiri, Kamui, Invocation (Chiens)",
-        story: `
-            <p><strong>Le Ninja Copieur :</strong> Fils du célèbre "Croc Blanc de Konoha", Kakashi est un prodige qui est devenu Jonin très jeune. Il est célèbre dans le monde entier sous le nom de "Kakashi au Sharingan", un œil qu'il a reçu en cadeau de son meilleur ami mourant, Obito Uchiwa, lors de la Troisième Grande Guerre Shinobi.</p>
-            <p><strong>Un Passé Douloureux :</strong> Kakashi a perdu tous ceux qui lui étaient chers : son père (qui s'est suicidé), son ami Obito, son amie Rin (qu'il a accidentellement tuée de ses propres mains) et son maître Minato (le 4ème Hokage). Malgré ces tragédies qui l'ont conduit à une période sombre au sein de l'ANBU, il a gardé un cœur pur et une philosophie stricte sur l'importance du travail d'équipe.</p>
-            <p><strong>Le Sixième Hokage :</strong> En tant que leader de l'Équipe 7, il a formé Naruto, Sasuke et Sakura, leur transmettant les valeurs d'Obito. Il a joué un rôle clé tout au long de l'histoire, jusqu'à mener les forces alliées lors de la Grande Guerre. Après le conflit, il accepte le rôle de Sixième Hokage pour assurer la transition pacifique avant que Naruto ne soit prêt.</p>
-        `
+        image: "kakashi.jpg",
+        quote: "Ceux qui abandonnent leurs amis sont pires que des déchets.",
+        jutsus: "Raikiri, Kamui, Multi-Clonage",
+        story: "<p>Le célèbre Ninja Copieur. Ancien membre de l'ANBU au passé tragique, il devient le mentor de l'Équipe 7. Son intelligence et son Sharingan l'ont mené à devenir le Sixième Hokage après la Grande Guerre.</p>"
+    },
+    {
+        name: "Sakura Haruno",
+        village: "Konoha",
+        image: "sakura.jpg",
+        quote: "Cette fois, c'est vous qui regarderez mon dos !",
+        jutsus: "Force herculéenne, Ninjutsu Médical, Création et Renouveau",
+        story: "<p>Élève de Tsunade, Sakura est passée d'une jeune fille fragile à la plus grande ninja médicale de sa génération (Kunoichi). Sa force physique titanesque et sa maîtrise parfaite du chakra font d'elle un atout indispensable.</p>"
+    },
+    {
+        name: "Shikamaru Nara",
+        village: "Konoha",
+        image: "shikamaru.jpg",
+        quote: "Quelle galère...",
+        jutsus: "Manipulation des Ombres, Étreinte Mortelle de l'Ombre",
+        story: "<p>Un génie doté d'un QI supérieur à 200, mais incroyablement paresseux. Malgré son manque de motivation initial, il devient le stratège le plus brillant de l'Alliance Shinobi et le conseiller personnel du Hokage.</p>"
+    },
+    {
+        name: "Minato Namikaze",
+        village: "Konoha",
+        image: "minato.jpg",
+        quote: "C'est le devoir d'un père de protéger son fils.",
+        jutsus: "L'Éclair Jaune, Dieu du Tonnerre Volant, Rasengan",
+        story: "<p>Le Quatrième Hokage et le père de Naruto. Surnommé l'Éclair Jaune de Konoha pour sa vitesse inégalée. Il a sacrifié sa vie avec sa femme Kushina pour sceller Kyûbi dans son fils nouveau-né.</p>"
+    },
+
+    // --- SUNA ---
+    {
+        name: "Gaara",
+        village: "Suna",
+        image: "gaara.jpg",
+        quote: "C'est parce qu'on a connu la souffrance qu'on peut être bon.",
+        jutsus: "Sarcophage de Sable, Tombeau du Désert",
+        story: "<p>Ancien Jinchūriki d'Ichibi, Gaara était une machine à tuer dénuée de sentiments. Sa rencontre et son combat contre Naruto ont transformé son cœur. Il est devenu le Cinquième Kazekage très jeune, respecté et aimé de son peuple.</p>"
+    },
+    {
+        name: "Temari",
+        village: "Suna",
+        image: "temari.jpg",
+        quote: "Ne sous-estime pas les femmes de Suna.",
+        jutsus: "Invocation (Kamaitachi), Lame du Vent",
+        story: "<p>Sœur aînée de Gaara, elle combat avec un éventail géant capable de générer des tempêtes dévastatrices. Elle est une fine stratège et deviendra plus tard l'épouse de Shikamaru.</p>"
+    },
+
+    // --- AKATSUKI ---
+    {
+        name: "Itachi Uchiwa",
+        village: "Akatsuki", // On le met dans Akatsuki pour le filtre
+        image: "itachi.jpg",
+        quote: "Le pardon est une chose difficile, mais c'est l'essence de l'amour.",
+        jutsus: "Tsukuyomi, Amaterasu, Susanoo, Izanami",
+        story: "<p>Prodige du clan Uchiwa. Il a massacré sa propre famille pour éviter une guerre civile à Konoha, acceptant d'endosser le rôle du traître haï par son propre frère pour maintenir la paix. Un véritable héros de l'ombre.</p>"
+    },
+    {
+        name: "Pain (Nagato)",
+        village: "Akatsuki",
+        image: "pain.jpg",
+        quote: "Ceux qui ne comprennent pas la douleur ne peuvent pas comprendre la véritable paix.",
+        jutsus: "Répulsion Céleste (Shinra Tensei), Attraction Céleste",
+        story: "<p>Leader officiel de l'Akatsuki. Manipulé par Obito, Nagato croyait que seule la souffrance absolue imposée au monde permettrait d'instaurer une paix durable. Il a détruit Konoha avant d'être convaincu par Naruto.</p>"
+    },
+    {
+        name: "Deidara",
+        village: "Akatsuki",
+        image: "deidara.jpg",
+        quote: "L'art est une explosion !",
+        jutsus: "Argile Explosive (C1 à C4, C0)",
+        story: "<p>Un ninja déserteur d'Iwa obsédé par l'art éphémère. Il façonne de l'argile explosive avec les bouches situées dans ses paumes. Il a livré des combats mémorables contre Gaara et Sasuke.</p>"
+    },
+
+    // --- KIRI ---
+    {
+        name: "Zabuza Momochi",
+        village: "Kiri",
+        image: "zabuza.jpg",
+        quote: "Les ninjas ne sont que des outils, utilisés puis jetés.",
+        jutsus: "Camouflage dans la Brume, Dragon Aqueux",
+        story: "<p>Le Démon de Kiri. Épéiste légendaire portant Kubikiribōchō. Il fut le premier grand antagoniste de l'Équipe 7. Sous son extérieur impitoyable se cachait un véritable attachement pour son jeune partenaire, Haku.</p>"
+    },
+    {
+        name: "Kisame Hoshigaki",
+        village: "Kiri",
+        image: "kisame.jpg",
+        quote: "Un monde où règnent le mensonge et la tromperie ne mérite pas d'exister.",
+        jutsus: "Requin Élémentaire d'Eau, Prison Aqueuse",
+        story: "<p>Le Monstre du Brouillard Caché et partenaire d'Itachi dans l'Akatsuki. Doté d'une réserve de chakra monstrueuse, il fusionne avec son épée vivante Samehada. Il est resté loyal à ses convictions jusqu'à la mort.</p>"
+    },
+
+    // --- KUMO ---
+    {
+        name: "Killer Bee",
+        village: "Kumo",
+        image: "killerbee.jpg",
+        quote: "Yo, écoute ça mec, mon flow est parfait, comme ma lame, il te tranche net !",
+        jutsus: "Mode Chakra de Hachibi, Lariat, Danse des 7 Sabres",
+        story: "<p>L'hôte du démon à huit queues (Hachibi) et frère adoptif du Raikage. Ninja extrêmement puissant qui passe son temps à chercher de nouvelles rimes pour son rap. Il a appris à Naruto comment contrôler son démon.</p>"
+    },
+
+    // --- IWA ---
+    {
+        name: "Onoki",
+        village: "Iwa",
+        image: "onoki.jpg",
+        quote: "Je vais vous montrer la volonté de la pierre !",
+        jutsus: "Libération de la Poussière (Jinton), Alourdissement",
+        story: "<p>Le Troisième Tsuchikage. Un vieillard têtu au dos fragile, mais l'un des ninjas les plus redoutables de l'histoire grâce à sa capacité Jinton, capable de réduire n'importe quoi en poussière au niveau moléculaire.</p>"
     }
 ];
 
-// 1. Initialisation de la page
-document.addEventListener('DOMContentLoaded', () => {
-    const grid = document.getElementById('character-grid');
-    const modal = document.getElementById('character-modal');
-    const closeBtn = document.querySelector('.close-btn');
-    const modalBody = document.getElementById('modal-body');
+// --- LOGIQUE DU SITE ---
 
-    // Génération des cartes
-    characters.forEach((char, index) => {
+const grid = document.getElementById('character-grid');
+const searchInput = document.getElementById('search-bar');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const modal = document.getElementById('character-modal');
+const modalBody = document.getElementById('modal-body');
+const closeBtn = document.querySelector('.close-btn');
+
+// 1. Fonction pour afficher les personnages en fonction des filtres
+function displayCharacters(charsToDisplay) {
+    grid.innerHTML = ''; // On vide la grille
+    
+    if (charsToDisplay.length === 0) {
+        grid.innerHTML = '<h3 style="color: white; text-align: center; grid-column: 1/-1;">Aucun ninja trouvé...</h3>';
+        return;
+    }
+
+    charsToDisplay.forEach(char => {
         const card = document.createElement('div');
         card.className = 'character-card';
-        // Ajout de l'événement de clic pour ouvrir la fenêtre détaillée
-        card.onclick = () => openModal(index);
+        // On passe l'objet complet à la fonction openModal
+        card.onclick = () => openModal(char);
         
         card.innerHTML = `
-            <img src="${char.image}" alt="${char.name}" class="card-image" onerror="this.src='https://placehold.co/300x400/333/ff7f00?text=Image'">
+            <img src="${char.image}" alt="${char.name}" class="card-image" onerror="this.src='https://placehold.co/300x300/2a2a2a/ff7f00?text=Image+Manquante'">
             <div class="card-content">
                 <h2>${char.name}</h2>
-                <p><strong>Village :</strong> ${char.village}</p>
+                <p>Village : <strong>${char.village}</strong></p>
             </div>
         `;
         grid.appendChild(card);
     });
+}
 
-    // Fonction pour ouvrir la modale et injecter le texte détaillé
-    function openModal(index) {
-        const char = characters[index];
-        modalBody.innerHTML = `
-            <div class="modal-header">
-                <img src="${char.image}" alt="${char.name}" onerror="this.src='https://placehold.co/200x200/333/ff7f00?text=Image'">
-                <div class="modal-title">
-                    <h2>${char.name}</h2>
-                    <p style="color: var(--primary-color);"><strong>Village d'origine :</strong> ${char.village}</p>
-                </div>
-            </div>
-            <div class="quote">"${char.quote}"</div>
-            <div class="jutsus">
-                <h3>Techniques Principales (Jutsu)</h3>
-                <p>${char.jutsus}</p>
-            </div>
-            <div class="biography">
-                <h3 style="color: var(--primary-color); margin-top: 2rem;">Biographie Complète</h3>
-                ${char.story}
-            </div>
-        `;
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden"; // Empêche le scroll derrière la fenêtre
-    }
+// 2. Gestion de la Recherche (Texte)
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    // On remet le bouton filtre sur "Tous" quand on cherche
+    filterBtns.forEach(btn => btn.classList.remove('active'));
+    document.querySelector('[data-village="Tous"]').classList.add('active');
 
-    // Fermeture de la modale avec le bouton "X"
-    closeBtn.onclick = () => {
+    const filtered = characters.filter(char => 
+        char.name.toLowerCase().includes(searchTerm) || 
+        char.village.toLowerCase().includes(searchTerm)
+    );
+    displayCharacters(filtered);
+});
+
+// 3. Gestion des Boutons de Filtrage (Villages)
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Gérer le style visuel des boutons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Vider la barre de recherche
+        searchInput.value = '';
+
+        const selectedVillage = btn.getAttribute('data-village');
+        
+        if (selectedVillage === 'Tous') {
+            displayCharacters(characters);
+        } else {
+            const filtered = characters.filter(char => char.village === selectedVillage);
+            displayCharacters(filtered);
+        }
+    });
+});
+
+// 4. Gestion de la Fenêtre Modale (Détails)
+function openModal(char) {
+    modalBody.innerHTML = `
+        <div class="modal-header">
+            <img src="${char.image}" alt="${char.name}" onerror="this.src='https://placehold.co/200x200/2a2a2a/ff7f00?text=Ninja'">
+            <div class="modal-title">
+                <h2>${char.name}</h2>
+                <span class="village-badge">${char.village}</span>
+            </div>
+        </div>
+        <div class="quote">"${char.quote}"</div>
+        <div class="jutsus">
+            <h3 style="color: var(--primary-color); margin-top: 0;">Techniques Phares</h3>
+            <p>${char.jutsus}</p>
+        </div>
+        <div class="biography">
+            <h3 style="color: var(--primary-color);">Histoire</h3>
+            ${char.story}
+        </div>
+    `;
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Empêche de scroller la page de fond
+}
+
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+window.onclick = (event) => {
+    if (event.target == modal) {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
     }
+}
 
-    // Fermeture de la modale en cliquant à côté de la fenêtre
-    window.onclick = (event) => {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    }
-});
+// Lancement au démarrage de la page
+displayCharacters(characters);
